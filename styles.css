@@ -1,0 +1,275 @@
+:root {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+.main-container {
+    width: 90%;
+    margin: 0 auto; 
+}
+
+.top-section {
+    margin-top: 1.2rem;
+}
+
+.header {
+    margin: 0 auto;
+}
+
+.site-nav, .mobile-menu__list {
+    margin: 0;
+    padding: 1.6rem 0;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.site-nav .company-icon {
+    margin-right: auto;
+}
+
+.site-nav > li + li {
+    margin-right: 1.2rem;
+}
+
+.site-nav > li > a, .mobile-menu__list > li > a {
+    display: block;
+    padding-top: 1rem;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.563);
+}
+
+.site-nav > li> a:hover,
+.mobile-menu__list > li> a:hover {
+    color:hsl(5, 85%, 63%);
+}
+
+.site-nav > .menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+#mobile-menu .mobile-menu__list {
+    flex-direction: column;
+}
+
+.mobile-menu-container {
+    position: relative;
+    width: 100wh;
+}
+
+#mobile-menu {
+    display: none;
+    z-index: 1000;
+    height: 100vh;
+    margin-top: -6.5em;
+    width: 70%;
+    background-color: white;
+    padding-left: 1.7em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: -2.5em;
+    box-shadow: 0 0 0 10000px rgba(0, 0, 0, .50);
+}
+
+#mobile-menu ul {
+    margin-top: 2em;
+}
+#mobile-menu ul > li + li {
+    margin-top: 1.2rem;
+}
+
+.close-icon-container {
+    position: absolute;
+    right: 0;
+    padding-top: 2em;
+    padding-right: 2em
+}
+
+.mobile-menu__list > li> a {
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.664);
+    font-weight: normal;
+}
+
+#mobile-menu__close-icon {
+    cursor: pointer;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-image-container > .main-image {
+    width: 100%;
+}
+
+.sub-text {
+    color: rgba(0,0,0,0.6);
+    margin: 1.5em 0;
+}
+
+.cta.main-cta {
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    text-transform: uppercase;
+    padding: 1em 2em;
+    letter-spacing: 0.2em;
+    border: none;
+}
+
+.right.side-bar {
+    background-color: black;
+    margin: 2.7rem auto;
+}
+
+.right.side-bar > .news-container {
+    width: 90%;
+    margin:0 auto;
+    color: white;
+}
+
+.news-container > .news-section-title {
+    color: hsl(35, 77%, 62%);
+    margin: 0.8rem 0;
+    font-size: 1.8rem;
+}
+
+.stories .story:not(:last-child) {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.397);
+}
+
+.story > .story-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.story > .story-title:hover {
+    color: hsl(35, 77%, 62%);
+}
+
+.story > .story-sub-heading {
+    color: rgba(204, 204, 204, 0.674);
+    font-size: 1rem;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-posts .blog-post:not(:last-child) {
+    margin-bottom: 1.9rem;
+}
+
+.blog-post   {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-image-container  {
+    flex: 1;
+    margin-right: 1.2rem;
+    max-width: 200px;
+}
+
+.blog-text {
+    flex: 3;
+}
+
+.blog-text > .blog-number {
+    color: rgba(0, 0, 0, 0.18);
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+}
+
+.blog-text > .blog-title {
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+}
+.blog-text > .blog-sub-text {
+    color: rgba(0, 0, 0, 0.428);
+}
+
+@media(max-width: 650px) {
+    .site-nav > li + li {
+        display: none;
+    }
+    
+    .site-nav > .menu-icon {
+        display: inline-block;
+    }
+}
+
+
+@media(min-width: 900px) {
+    .site-nav {
+        padding-top: 2rem;
+    }
+
+    .right.side-bar {
+        margin-top: 0;
+        padding: 0.7em 1em;
+    }
+
+    .blog-posts {
+        flex-direction: row;
+        gap: 1.3rem;
+    }
+    .blog-post img {
+        loading: "lazy";
+    }
+
+    .top-section {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.8rem;
+        margin: 3rem auto;
+    }
+
+    .top-section .left {
+        flex: 2;
+    }
+
+    .top-section .right {
+        flex: 1;
+    }
+
+    .top-section .text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 1rem;
+        gap: 2rem;
+    }
+
+    .top-section .title {
+        margin: 0;
+        font-size: 3.6rem;
+    }
+   
+    .top-section .text .sub-text {
+        margin: 0 0 2rem;
+        font-size: 1rem;
+        letter-spacing: normal;
+        line-height: 1.5;
+        padding-right: 1em;
+    }
+
+  
+}
